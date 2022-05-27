@@ -13,6 +13,8 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Threading.Tasks;
 using Information_Catd.Infrastructure.Repository;
+using Microsoft.EntityFrameworkCore;
+using Information_Card.Infrastructure.Repository.Base;
 
 namespace Information_Card.Api
 {
@@ -26,17 +28,26 @@ namespace Information_Card.Api
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-  //         services.AddDbContext<Context>(options =>
-  //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("Information_Card.Api")));
-            //dotnet ef database update
-
-          //  services.AddScoped<IRepository<Employee>, Repository<Employee>>();
-            services.AddScoped<IRepository<Employee>, RepositoryFile<Employee>>();
-            services.AddScoped<IFileDataAccess, FileDataAccess>();
  
+            var repositoryType = Configuration.GetSection("ChooseData:Repository").Value;
+          
+            if (repositoryType == "File")
+            {
+                services.AddScoped<IRepository<Employee>, RepositoryFile<Employee>>();
+                services.AddScoped<IFileDataAccess, FileDataAccess>();
+                
+            }
+            else
+            if(repositoryType == "DB")
+            {
+                         services.AddDbContext<Context>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("Information_Card.Api")));
+                // dotnet ef database update
+                services.AddScoped<IRepository<Employee>, Repository<Employee>>();
+                SeedDatabase(services.BuildServiceProvider());
+            }
+
             services.AddScoped<IEmployeeService, EmployeeService>();
-              
-          //  SeedDatabase(services.BuildServiceProvider());
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

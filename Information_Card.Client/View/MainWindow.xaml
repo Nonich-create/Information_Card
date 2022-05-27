@@ -1,0 +1,63 @@
+﻿<Window x:Class="Information_Card.Client.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Information_Card.Client.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-42">
+        <Grid Background="#FFE5E5E5" Margin="0,0,0,-25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="170*"/>
+                <RowDefinition/>
+                <RowDefinition Height="81*"/>
+            </Grid.RowDefinitions>
+            <ListBox ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee}" Margin="0,0,397,0" Grid.RowSpan="2">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5">
+                            <TextBlock FontSize="12" Text="{Binding Path=Surname}"/>
+                            <TextBlock FontSize="12" Text="{Binding Path=Name}"/>
+                            <TextBlock FontSize="12" Text="{Binding Path=Salary}"/>
+                            <TextBlock FontSize="12" Text="{Binding Path=Job}"/>
+                            <TextBlock FontSize="12" Text="{Binding Path=PhoneNumber}"/>
+                            <TextBlock FontSize="12" Text="{Binding Path=Status}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <StackPanel DataContext="{Binding SelectedEmployee}" Margin="408,0,0,0" HorizontalAlignment="Left" Width="392" Height="517" VerticalAlignment="Bottom" Grid.RowSpan="3">
+
+
+
+                <TextBlock Text="Выбранный элемент" Margin="0,20,90,0" />
+                <TextBlock Text="Фамилия" Margin="15,0,90,0"/>
+
+                <TextBox Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="-120,0,90,0" RenderTransformOrigin="0.5,1.246" Width="183"/>
+                <TextBlock Text="Имя" Margin="15,0,90,0"/>
+                <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="-120,0,90,0" RenderTransformOrigin="0.5,1.246" Width="183"/>
+                <TextBlock Text="Зарплата" Margin="15,0,90,0"/>
+                <TextBox Text="{Binding Salary, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="-200,0,90,0" RenderTransformOrigin="0.5,1.246" Width="100"/>
+                <TextBlock Text="Статус" Margin="15,0,90,0"/>
+                <TextBox Text="{Binding Status, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="0,0,90,0" RenderTransformOrigin="0.5,1.246" Width="302"/>
+                <TextBlock Text="Номер телефона" Margin="15,0,90,0"/>
+                <TextBox  Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="0,0,90,0" RenderTransformOrigin="0.5,1.246" Width="302"/>
+                <TextBlock Text="Должность" Margin="15,0,90,0"/>
+                <TextBox Text="{Binding Job, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="0,0,90,0" RenderTransformOrigin="0.5,1.246" Width="302"/>
+                <TextBlock Text="Ссылка на картинку" Margin="15,0,90,0"/>
+                <TextBox Text="{Binding PathPhoto, UpdateSourceTrigger=PropertyChanged}" Height="29" Margin="0,0,90,0" RenderTransformOrigin="0.5,1.246" Width="302"/>
+                <Image Source="{Binding PathPhoto, UpdateSourceTrigger=PropertyChanged}" Height="98" Width="144"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,8,10,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Right" Width="784" Grid.Row="2">
+                <Button Command="{Binding LoadData}" Content="Загрузить" Margin="30,15,0,0" Width="75" Height="33"/>
+                <Button Command="{Binding AddCommand}" Height="34" Width="75" Margin="1,15,0,0" Content="Добавить"/>
+                <Button Command="{Binding SaveCommand}" Height="34" Width="75" Margin="1,15,0,0" Content="Сохранить"/>
+                <Button Command="{Binding UpdateCommand}" Height="34" Width="175" Margin="1,15,0,0" Content="Сохранить изменения"/>
+                <Button Command="{Binding DeleteCommand}" Height="34" Width="75" Margin="1,15,0,0" Content="Удалить"/>
+            </StackPanel>
+   
+        </Grid>
+    </Grid>
+</Window>

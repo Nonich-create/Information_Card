@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Information_Card.Application/1.0.0": {
+        "dependencies": {
+          "Information_Card.Core": "1.0.0"
+        },
+        "runtime": {
+          "Information_Card.Application.dll": {}
+        }
+      },
+      "Information_Card.Core/1.0.0": {
+        "runtime": {
+          "Information_Card.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Information_Card.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Information_Card.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

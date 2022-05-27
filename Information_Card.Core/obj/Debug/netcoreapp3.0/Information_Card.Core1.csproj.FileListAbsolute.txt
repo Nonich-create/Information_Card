@@ -1,0 +1,10 @@
+F:\.Net\WPF\Information_Card.Core\bin\Debug\netcoreapp3.0\Information_Card.Core1.deps.json
+F:\.Net\WPF\Information_Card.Core\bin\Debug\netcoreapp3.0\Information_Card.Core1.dll
+F:\.Net\WPF\Information_Card.Core\bin\Debug\netcoreapp3.0\Information_Card.Core1.pdb
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.csproj.AssemblyReference.cache
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.GeneratedMSBuildEditorConfig.editorconfig
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.AssemblyInfoInputs.cache
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.AssemblyInfo.cs
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.csproj.CoreCompileInputs.cache
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.dll
+F:\.Net\WPF\Information_Card.Core\obj\Debug\netcoreapp3.0\Information_Card.Core1.pdb

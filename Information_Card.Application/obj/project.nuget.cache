@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TJK7gv3dDwCruZ/iFrvWZdp86H1crCQHTrXMCzw5XgMwmLMdDjBmXFnPJj7lnpk99vqI7boJjBX3rzx5hSs+Sg==",
+  "success": true,
+  "projectFilePath": "F:\\.Net\\Information_Card\\Information_Card.Application\\Information_Card.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\iogyr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\iogyr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\iogyr\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

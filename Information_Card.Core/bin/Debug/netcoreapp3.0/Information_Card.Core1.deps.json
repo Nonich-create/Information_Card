@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Information_Card.Core1/1.0.0": {
+        "runtime": {
+          "Information_Card.Core1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Information_Card.Core1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
